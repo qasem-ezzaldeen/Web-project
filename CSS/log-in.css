@@ -22,9 +22,17 @@ body {
 h1{
     font-family: 'Pixelify Sans';
     color: var(--light1);
-    font-size: 3.5rem
+    font-size: 3.5rem;
+    transition: 1s ease-out;
+    cursor: pointer;
 }
-
+h1:hover {
+    text-shadow: 1px 1px 10px var(--light1);
+}
+h1>a{
+    color: var(--light1);
+    text-decoration: none;
+}
 .container {
     background-color: var(--light1);
     padding: 20px;
