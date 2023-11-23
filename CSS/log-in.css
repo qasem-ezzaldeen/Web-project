@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 h1{
     font-family: 'Pixelify Sans';
@@ -30,9 +30,9 @@ h1{
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    height: 400px;}
+    min-height: 400px;}
 
-.sign-in-form {
+.Log-in-form {
     width: 400px;
     margin: 0 auto;
 }
@@ -61,7 +61,7 @@ input {
     box-sizing: border-box;
 }
 
-button {
+button[type=submit] {
     background-color: var(--dark2);
     color: var(--light1);
     padding: 10px;
@@ -74,4 +74,21 @@ button {
 
 button:hover {
     background-color: var(--dark1);
+}
+.switch{
+    background-color: var(--dark2);
+    color: var(--light1);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 8px;
+}
+.switch>button{
+    border: none;
+    background-color: var(--light1);
+    color: var(--dark1);
+    font-size: var(--FS-mid);
+    border-radius: 8px;
+    width: 40%;
+    cursor:pointer ;
 }
