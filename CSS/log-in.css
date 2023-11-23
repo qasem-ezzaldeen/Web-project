@@ -30,7 +30,7 @@ h1:hover {
     text-shadow: 1px 1px 10px var(--light1);
 }
 h1>a{
-    color: var(--light1);
+    color: inherit;
     text-decoration: none;
 }
 .container {
