@@ -1,0 +1,14 @@
+body{
+    height: 100dvh;
+}
+.empty{
+    font-size: var(--FS-big);
+    grid-area: cont;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.empty>a{
+    text-decoration: underline;
+}

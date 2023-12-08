@@ -16,18 +16,18 @@
     --FS-small : clamp(1rem,1.1vw,1.5rem)
 }
 body {
-    font-family: 'PT Sans', sans-serif;
     font-family: 'Quicksand', sans-serif;
     background: var(--light1);
     color: var(--dark1);
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: minmax(auto,4.5em) minmax(auto, 4em) 1fr 3rem;
+    grid-template-rows: minmax(auto,4.5em) minmax(auto, 4em) 1fr  3rem;
     grid-template-areas: "header header header header header header header header"
         "nav nav nav nav nav nav nav nav"
-        "filter filter cont cont cont cont cont ad"
+        "filter cont cont cont cont cont cont ad"
         "footer footer footer footer footer footer footer footer";
-    min-height: 100vh;
+        overflow-x: hidden;
+
 }
 
 ul {
@@ -40,9 +40,6 @@ a {
     color: inherit;
 }
 
-
-
-
 header {
     grid-area: header;
     display: grid;
@@ -53,7 +50,7 @@ header {
     color:var(--light1);
 }
 
-h1 {
+header h1 {
     font-family: 'Pixelify Sans' ;
     grid-area: logo;
     transition: 1s ease-out;
@@ -73,7 +70,6 @@ h1:hover {
     display: none;
 }
 
-
 #search {
     min-width: 100px;
     width: 80%;
@@ -87,9 +83,6 @@ h1:hover {
 #search:focus {
     outline: none;
 }
-
-
-
 
 header>ul {
     height: 100%;
@@ -130,7 +123,7 @@ nav {
 
 nav ul {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     column-gap: 0.33rem;
     overflow-x: auto;
     -ms-overflow-style: none;
@@ -158,13 +151,6 @@ nav a:hover {
     border-left: 1px solid white;
 }
 
-
-
-
-
-
-
-
 .filter {
     grid-area: filter;
 }
@@ -178,5 +164,76 @@ nav a:hover {
 }
 
 footer {
-    grid-area: footer
+    grid-area: footer;
+    background-color: var(--dark2);
+    color: var(--light1);
+}
+.sub-title{
+    margin: 0 10px;
+}
+.product-view{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 5px;
+    align-items: center;
+    flex-basis: 25%;
+}
+.product{
+    background-color: #a8dadc7a;
+    border-radius: 0.5rem;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.price{
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 5px;
+    position: relative;
+}
+.new-price{
+    font-size: larger;
+}
+.old-price{
+    position: absolute;
+    bottom: 0;
+    text-decoration: line-through;
+    translate: -10%;
+    font-size: 0.8rem;
+    margin: 0 10px;
+}
+
+.product p{
+    max-width: 100%;
+}
+.product img{
+    border-radius: 0.4rem;
+    width: 100%;
+}
+.product button{
+    margin-bottom: 5px;
+}
+button{
+    border-radius: 1rem;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--light1);
+    background-color: var(--dark1);
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+button:hover{
+    background-color: var(--dark2);
 }
