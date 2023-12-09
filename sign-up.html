@@ -5,36 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS\log-in.css">
     <link rel="shortcut icon" href="Images/icon.png">
-    <title>Log In</title>
+    <title>Sign Up</title>
 </head>
 <body>
     <h1><a href="index.html">Bits N Bytes</a></h1>
     <div class="container">
-        <h2>Log In</h2>
+        <h2>Sign up</h2>
         <div class="switch">
             <button onclick="buy()" id="btn_buy" >Buyer</button>
             <button onclick="sell()" id="btn_sell" style="background-color: inherit;">Seller</button>
         </div>
         <form class="Log-in-form seller" id='seller' action="index.html" style="display: none;">
             <h3>Hi, Seller!</h3>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <label for="First">First name:</label>
+            <input type="text" id="First" name="First" required>
+            <label for="Last">Last name:</label>
+            <input type="text" id="Last" name="Last" required>
+            <label for="number">Phone Number:</label>
+            <input type="text" id="number" name="number" required>
+            <label for="add">Address:</label>
+            <input type="text" id="add" name="add" required>
+            <label for="mail">Email:</label>
+            <input type="Email" id="mail" name="mail" required>
+            
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <br><br>
-            <button type="submit">Log In</button>
+            <button type="submit">Sign Up</button>
+        </form>
         </form>
         <form class="Log-in-form buyer" id="buyer" action="index.html" style="display: block;">
             <h3>Hi, Buyer!</h3>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <label for="First">First name:</label>
+            <input type="text" id="First" name="First" required>
+            <label for="Last">Last name:</label>
+            <input type="text" id="Last" name="Last" required>
+            <label for="number">Phone Number:</label>
+            <input type="text" id="number" name="number" required>
+            <label for="add">Address:</label>
+            <input type="text" id="add" name="add" required>
+            <label for="mail">Email:</label>
+            <input type="Email" id="mail" name="mail" required>
+            
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <br><br>
-            <button type="submit">Log In</button>
+            <button type="submit">Sign Up</button>
         </form>
-        <p>Don't have an account? <a href="sign-up.htm">Sign up now!</a></p>
+        <p>already have an account? <a href="log-in.html">Log in now!</a></p>
     </div>
+    <br><br> 
     <script>
         function sell(){
             document.getElementById("btn_sell").style.backgroundColor='#F1FAEE'
