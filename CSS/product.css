@@ -17,14 +17,8 @@ body{height: 100vh}
     column-gap: 5%;
 }
 @media screen and (max-width:850px){
-    body{
-        grid-template-areas: "header header header header header header header header"
-        "nav nav nav nav nav nav nav nav"
-        "cont cont cont cont cont cont cont cont"
-        "footer footer footer footer footer footer footer footer";
-    }
         .product-page{
-            gap: 0;
+        gap: 0;
         grid-template-columns: 4fr 2fr;
         grid-template-rows: auto 1fr;
         grid-template-areas: 
@@ -49,6 +43,11 @@ img{
 .product-data>h1{
     font-family: inherit;
 
+}
+footer{
+    position: absolute;
+    bottom: -293px;
+    width: 100%;    
 }
 .old-price{
     bottom: 5px; left: 25%;

@@ -21,8 +21,9 @@ body {
     color: var(--dark1);
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: minmax(auto,4.5em) minmax(auto, 4em) 1fr  3rem;
-    grid-template-areas: "header header header header header header header header"
+    grid-template-rows: minmax(auto,4.5em) minmax(auto, 4em) 1fr  auto;
+    grid-template-areas: 
+        "header header header header header header header header"
         "nav nav nav nav nav nav nav nav"
         "filter cont cont cont cont cont cont ad"
         "footer footer footer footer footer footer footer footer";
@@ -50,7 +51,7 @@ header {
     color:var(--light1);
 }
 
-header h1 {
+header h1,footer h1 {
     font-family: 'Pixelify Sans' ;
     grid-area: logo;
     transition: 1s ease-out;
@@ -164,9 +165,31 @@ nav a:hover {
 }
 
 footer {
+
     grid-area: footer;
-    background-color: var(--dark2);
+    background-color: var(--dark1);
     color: var(--light1);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+footer li{
+    margin: 7.5px 0 7.5px 10px;
+}
+footer a li{
+    text-decoration: underline;
+}
+footer img{
+    width: 27px;
+}
+footer .footer>*{
+    margin: 5px 0;
+}
+
+.person>*{
+    margin: 10px;
 }
 .sub-title{
     margin: 0 10px;
@@ -174,11 +197,23 @@ footer {
 .product-view{
     margin: 20px 0;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
-    gap: 5px;
+    gap: 10px 5px;
     align-items: center;
     flex-basis: 25%;
+}
+@media screen and (max-width:550px){
+    .ad,.filter{
+        display: none;
+    }
+    body{
+        grid-template-areas: 
+        "header header header header header header header header"
+        "nav nav nav nav nav nav nav nav"
+        "cont cont cont cont cont cont cont cont"
+        "footer footer footer footer footer footer footer footer";
+    }
 }
 .product{
     background-color: #a8dadc7a;
