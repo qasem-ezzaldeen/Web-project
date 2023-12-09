@@ -225,6 +225,7 @@ footer .footer>*{
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 265px;
 }
 .price{
     height: 3rem;
